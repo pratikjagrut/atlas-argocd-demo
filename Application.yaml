@@ -9,7 +9,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: ./
-    repoURL: 'https://github.com/pratikjagrut/atlas-gitops-demo.git'
+    repoURL: 'https://github.com/pratikjagrut/atlas-argocd-demo'
     targetRevision: HEAD
   project: default
   syncPolicy:
