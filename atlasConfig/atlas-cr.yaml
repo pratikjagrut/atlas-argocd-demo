@@ -1,6 +1,9 @@
 apiVersion: db.atlasgo.io/v1alpha1
 kind: AtlasSchema
 metadata:
+  annotations:
+    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/sync-wave: "1"
   name: myapp
 spec:
   url: mysql://root:password@mysql:3306/example
