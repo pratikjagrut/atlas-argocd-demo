@@ -32,6 +32,16 @@ spec:
           value: pass
         - name: MYSQL_DATABASE
           value: example
+        readinessProbe:
+            tcpSocket:
+              port: 3306
+            initialDelaySeconds: 10
+            periodSeconds: 10
+        livenessProbe:
+          tcpSocket:
+            port: 3306
+          initialDelaySeconds: 15
+          periodSeconds: 15
         ports:
         - containerPort: 3306
           name: mysql

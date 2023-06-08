@@ -1,14 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: mysql-db
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+  name: nginx
   namespace: argocd
 spec:
   destination:
     namespace: default
     server: 'https://kubernetes.default.svc'
   source:
-    path: dbConfig
+    path: nginx
     repoURL: 'https://github.com/pratikjagrut/atlas-argocd-demo'
     targetRevision: HEAD
   project: default
