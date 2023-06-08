@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: atlas
+  namespace: argocd
+spec:
+  destination:
+    namespace: default
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: atlasConfig
+    repoURL: 'https://github.com/pratikjagrut/atlas-argocd-demo'
+    targetRevision: HEAD
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
