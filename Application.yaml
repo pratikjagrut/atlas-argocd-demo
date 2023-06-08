@@ -9,7 +9,7 @@ spec:
     repoURL: 'https://github.com/pratikjagrut/atlas-argocd-demo'
     targetRevision: main
   destination:
-    namespace: argocd
+    namespace: default
     server: 'https://kubernetes.default.svc'
   project: default
   syncPolicy:
