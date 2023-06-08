@@ -3,7 +3,7 @@ kind: AtlasSchema
 metadata:
   name: myapp
 spec:
-  url: mysql://root:pass@mysql:3306/example
+  url: mysql://root:password@mysql:3306/example
   schema:
     sql: |
       create table users (
