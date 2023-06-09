@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   source:
-    path: test
+    path: configs
     repoURL: 'https://github.com/pratikjagrut/atlas-argocd-demo'
     targetRevision: main
   destination:
