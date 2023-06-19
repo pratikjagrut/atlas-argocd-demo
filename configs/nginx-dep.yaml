@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "2"
-  name: nginx-deployment
+  name: nginx
 spec:
   selector:
     matchLabels:
